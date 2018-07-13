@@ -60,7 +60,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Button title="Send Event" onPress={() => this.senEvent()} />
+        <Button title="Send Event" onPress={() => this.sendEvent()} />
         <Button title="Native Crash" onPress={() => this.nativeCrash()} />
         <Button title="JS Crash" onPress={() => this.jsCrash()} />
         <Button title="Code Push" onPress={() => this.codepushSync()} />
