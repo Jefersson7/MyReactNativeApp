@@ -7,8 +7,12 @@
     "test": "jest"
   },
   "dependencies": {
+    "appcenter": "^1.6.0",
+    "appcenter-analytics": "^1.6.0",
+    "appcenter-crashes": "^1.6.0",
     "react": "16.4.1",
-    "react-native": "^0.55.4"
+    "react-native": "^0.55.4",
+    "react-native-code-push": "^5.4.0"
   },
   "devDependencies": {
     "babel-jest": "23.4.0",
@@ -17,6 +21,11 @@
     "react-test-renderer": "16.4.1"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFiles": [
+      "./node_modules/appcenter/test/AppCenterMock.js",
+      "./node_modules/appcenter-analytics/test/AppCenterAnalyticsMock.js",
+      "./node_modules/appcenter-crashes/test/AppCenterCrashesMock.js"
+    ]
   }
 }
