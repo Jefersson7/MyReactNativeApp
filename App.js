@@ -60,17 +60,23 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
+        <Text style={styles.codepush}>Added with Code Push</Text>
         <Button title="Send Event" onPress={() => this.sendEvent()} />
         <Button title="Native Crash" onPress={() => this.nativeCrash()} />
         <Button title="JS Crash" onPress={() => this.jsCrash()} />
         <Button title="Code Push" onPress={() => this.codepushSync()} />
         <Text>{JSON.stringify(this.state.logs)}</Text>
+        {this.state.logs.map((log, i) => <Text key={i}>{log}</Text>)}
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  codepush: {
+    fontSize: 25,
+    textAlign: 'center'
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
