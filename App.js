@@ -61,6 +61,7 @@ export default class App extends Component {
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.codepush}>Added with Code Push</Text>
+        <Text style={styles.codepush}>Another text added with code push</Text>
         <Button title="Send Event" onPress={() => this.sendEvent()} />
         <Button title="Native Crash" onPress={() => this.nativeCrash()} />
         <Button title="JS Crash" onPress={() => this.jsCrash()} />
